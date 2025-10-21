@@ -1,0 +1,47 @@
+        /* 清除 a 链接的默认样式 */
+        a {
+            /* 1. 清除默认颜色（未访问蓝色 #0000EE，已访问紫色 #551A8B） */
+            /* color: inherit; */
+            /* 继承父元素文字颜色，避免自带颜色干扰 */
+            /* 2. 清除默认下划线 */
+            text-decoration: none;
+            /* 3. 清除点击/聚焦时的默认轮廓（如虚线框） */
+            outline: none;
+            /* 4. 清除默认内外边距（部分浏览器可能有微小默认值） */
+            margin: 0;
+            padding: 0;
+            /* 5. 确保光标样式为指针（默认是 pointer，可选保留） */
+            cursor: pointer;
+        }
+
+        /* 重置状态伪类的默认样式（避免状态变化时的默认行为） */
+        a:visited {
+            color: inherit;
+            /* 访问过的链接与未访问时颜色一致 */
+        }
+
+        a:hover,
+        a:active {
+            text-decoration: none;
+            /* 悬浮/点击时不出现默认下划线 */
+            color: inherit;
+            /* 悬浮/点击时颜色不变（可自定义） */
+        }
+
+        /* 重置 ul 的默认样式 */
+        ul {
+            /* 1. 清除列表项前的默认项目符号（圆点、圆圈等） */
+            list-style: none;
+
+            /* 2. 清除默认内外边距（浏览器默认 ul 左侧有 padding 用于容纳项目符号） */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 重置 li 的默认样式（部分浏览器 li 可能有默认边距） */
+        ul li {
+            margin: 0;
+            padding: 0;
+            /* 可选：清除默认换行/对齐影响（如 vertical-align） */
+            vertical-align: baseline;
+        }
