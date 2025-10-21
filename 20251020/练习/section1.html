@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>section1</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/myReset.css">
+    <style>
+        div.container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        section.top {
+            /* 行内行内块子元素水平居中对齐 */
+            text-align: center;
+        }
+
+        section.top ul {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0 100px;
+            margin: 20px 0;
+        }
+
+        section.top ul li a {
+            color: #000;
+        }
+
+        section.top div.line {
+            border: 2px solid #000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="top">
+        <div class="container">
+            <img src="./img/logo.png" alt="logo">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">新品系列</a></li>
+                <li><a href="#">女士系列</a></li>
+                <li><a href="#">男士系列</a></li>
+                <li><a href="#">品牌故事</a></li>
+            </ul>
+            <div class="line"></div>
+        </div>
+    </section>
+</body>
+
+</html>

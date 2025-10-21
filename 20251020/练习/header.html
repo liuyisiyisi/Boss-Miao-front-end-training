@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/myReset.css">
+    <style>
+        header {
+            height: 50px;
+            background-color: #000;
+            /* flex布局 */
+            display: flex;
+            justify-content: space-between;
+
+            /* 内边距 */
+            padding: 0 100px;
+        }
+
+        header nav {
+            text-align: center;
+            line-height: 50px;
+        }
+
+        header nav a {
+            margin-right: 10px;
+            font-size: 15px;
+            color: #fff;
+        }
+
+        header nav img {
+            width: 40px;
+            /* 文字和图片垂直居中齐 */
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#"><img src="./img/login.png" alt="登录">登录</a>
+            <a href="#"><img src="./img/register.png" alt="注册">立即注册</a>
+        </nav>
+        <nav>
+            <a href="#"><img src="./img/myLXF.png" alt="我的LXF">我的LXF</a>
+            <a href="#"><img src="./img/shopping-cart.png" alt="购物车">购物车</a>
+            <a href="#"><img src="./img/search.png" alt="搜索">点击搜索</a>
+        </nav>
+    </header>
+</body>
+
+</html>
