@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Inline Element</title>
+    <style>
+        div {
+            background-color: gray;
+            width: 800px;
+            height: 800px;
+        }
+        /* 行内元素 不独占一行 不能设置宽高 可以设置左右margin 不能设置上下margin */
+        span {
+            background-color: skyblue;
+            width: 100px;
+            height: 200px;
+            margin: 0 20px;
+        }
+        /* 行内块元素 不独占一行 可以设置宽高 可以设置margin */
+        button {
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px;
+        }
+        /* 行内块元素 */
+        video {
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+            margin: 10px; 
+        }
+        /* 行内块元素 */
+        audio {
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+            margin: 10px; 
+        }
+        /* 行内块元素 */
+        textarea {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+        /* 行内块元素 */
+        select {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+        /* 行内元素 */
+        a {
+            width: 100px;
+            height: 100px;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+        /* 行内块元素 */
+        input {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+        /* 行内块元素 */
+        img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+        <!--
+        行内标签    
+        span, img, button, video, audio, input, textarea, select, a
+        ● 不可以独占一行，与其他的行内标签共处一行
+        ● 不会换行
+        ● 不可以设置宽高
+        ● 可以设置margin 只有左右有效
+        ⚠️ img input 可以宽高和margin 
+        -->
+        <!-- button，video，audio, textarea, select, a -->
+    <div>
+        <span>今天是星期二</span>
+        <span>今天是星期二</span>
+        <button>按我</button>
+        <button>按我</button>
+        <video src=""></video>
+        <video src=""></video>
+        <audio src=""></audio>
+        <audio src=""></audio>
+        <br>
+        <textarea name="" id="">xxxxxxxxxxxxxxxxxxxxxxxx</textarea><textarea name="" id="">xxxxxxxxxxxxxxxxxxxxxxxx</textarea>
+        <select name="" id="">
+            <option value="">aaa</option>
+            <option value="">bbb</option>
+            <option value="">ccc</option>
+        </select>
+        <select name="" id="">
+            <option value="">aaa</option>
+            <option value="">bbb</option>
+            <option value="">ccc</option>
+        </select>
+        <br>
+        <a href="">链接</a>
+        <a href="">链接</a>
+
+        <input type="text" value="">
+        <input type="text" value="">
+        <br>
+        <img src="./img/logo.png" alt="">
+        <img src="./img/logo.png" alt="">
+        
+    </div>
+</body>
+</html>
