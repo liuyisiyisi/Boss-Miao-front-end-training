@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>backgroud1</title>
+    <title>backgroud2</title>
     <style>
         div.box {
             width: 800px;
@@ -11,46 +11,45 @@
             background-color: gray;
             position: relative;
         }
-
+        
         div.corner-img {
-            width: 50px;
-            height: 50px;
-            background-repeat: no-repeat;
-            background-size: cover;
+            width: 100px;
+            height: 100px;
             position: absolute;
         }
 
-        div.tl {
+        div.lt {
             background-image: url(./img/bg-lt.png);
             top: 0;
             left: 0;
         }
 
-        div.tr {
+        div.rt {
             background-image: url(./img/bg-rt.png);
             top: 0;
             right: 0;
         }
-        div.br {
-            background-image: url(./img/bg-rb.png);
-            bottom: 0;
-            right: 0;
-        }
-        div.bl {
+
+        div.lb {
             background-image: url(./img/bg-lb.png);
             bottom: 0;
             left: 0;
         }
 
+        div.rb {
+            background-image: url(./img/bg-rb.png);
+            bottom: 0;
+            right: 0;
+        }
 
     </style>
 </head>
 <body>
     <div class="box">
-        <div class="corner-img tl"></div>
-        <div class="corner-img tr"></div>
-        <div class="corner-img bl"></div>
-        <div class="corner-img br"></div>
+        <div class="corner-img lt"></div>
+        <div class="corner-img rt"></div>
+        <div class="corner-img lb"></div>
+        <div class="corner-img rb"></div>
     </div>
 </body>
 </html>
