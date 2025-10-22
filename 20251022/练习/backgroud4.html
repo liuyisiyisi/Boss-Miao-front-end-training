@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backgroud4</title>
+    <style>
+        /* 所有图标的公共样式 */
+        .icon {
+            width: 50px;
+            /* 每个小图的宽度（必须和小图一致） */
+            height: 50px;
+            /* 每个小图的高度（必须和小图一致） */
+            background-image: url("./img/sprite.png");
+            /* 引入雪碧图 */
+            background-repeat: no-repeat;
+            /* 禁止图片重复（关键！） */
+            /* display: inline-block; 让图标并排显示 */
+            /* margin: 0 10px; */
+            /* 图标之间留间距 */
+        }
+
+        /* 1. 显示首页图标（在最左上角，不用偏移） */
+        .home {
+            background-position: -5px 0;
+        }
+
+        /* 2. 显示消息图标（在home右边40px，所以向左移40px才能露出它） */
+        .msg {
+            background-position: -40px 0;
+        }
+
+        /* 3. 显示设置图标（在home下边40px，所以向上移40px才能露出它） */
+        .set {
+            background-position: 0 -40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 三个要显示图标的地方 -->
+    <div class="icon home"></div>
+    <!-- <div class="icon msg"></div>
+    <div class="icon set"></div> -->
+</body>
+
+</html>
