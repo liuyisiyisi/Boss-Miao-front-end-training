@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box</title>
+    <style>
+        .outer {
+            width: 600px;
+            height: 600px;
+            background-color: gray;
+            overflow: hidden;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* 水平居中 */
+            /* margin: 0 auto; */
+            /* margin合并 */
+            margin: 50px 0;
+        }
+        span {
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+            /* margin: 10px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"><span>哈哈哈哈</span></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div>
+</body>
+</html>
