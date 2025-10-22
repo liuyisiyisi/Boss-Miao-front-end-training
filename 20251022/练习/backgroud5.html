@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      height: 2000px; /* 让页面有滚动空间 */
+      margin: 0;
+    }
+
+    /* 1. scroll（默认）：背景随元素滚动 */
+    .box1 {
+      height: 400px;
+      background: url("https://picsum.photos/id/1015/800/600") no-repeat;
+      background-size: cover;
+      background-attachment: scroll; /* 默认值，可省略 */
+    }
+
+    /* 2. fixed：背景固定在视口，不随页面滚动 */
+    .box2 {
+      height: 400px;
+      background: url("https://picsum.photos/id/1036/800/600") no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    /* 3. local：背景随元素内容滚动（元素自身有滚动条时） */
+    .box3 {
+      height: 300px;
+      overflow: auto; /* 让元素出现滚动条 */
+      background: url("https://picsum.photos/id/292/200/200") no-repeat;
+      background-size: 200px;
+      background-attachment: local;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">scroll：滚动页面，背景会跟着盒子一起移动</div>
+  <div class="box2">fixed：滚动页面，背景固定不动（相对于屏幕）</div>
+  <div class="box3">
+    local：滚动这个盒子的内容（鼠标滚轮在这个区域滚动），背景会跟着内容动<br>
+    （多滚几下看看效果）<br><br>
+    内容内容内容内容内容内容内容内容内容内容内容内容<br>
+    内容内容内容内容内容内容内容内容内容内容内容内容<br>
+    内容内容内容内容内容内容内容内容内容内容内容内容<br>
+    内容内容内容内容内容内容内容内容内容内容内容内容<br>
+    内容内容内容内容内容内容内容内容内容内容内容内容<br>
+    内容内容内容内容内容内容内容内容内容内容内容内容<br>
+  </div>
+</body>
+</html>
