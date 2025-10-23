@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            color: #e8e8e8;
+            text-decoration: none;
+        }
+
+        li  {
+            list-style: none;
+        }
+
+        body {
+            /*防止页面被压缩*/
+            min-width: 1200px;
+        }
+        header {
+            height: 50px;
+            background-color: #c69;
+        }
+        .container {
+            width: 1140px;
+            margin: 0 auto;
+        }
+
+        header .container {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .header-left {
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+        }
+
+        .header-right ul {
+            height: 100%;
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-right ul li {
+            text-align: center;
+            line-height: 50px;
+        }
+        select {
+            font-size: 20px;
+            background-color: #c69;
+            color: #e8e8e8;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <a href="#">Sass中文网</a>
+            </div>
+            <div class="header-right">
+                 <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">安装</a></li>
+                    <li><a href="#">快速入门</a></li>
+                    <li><a href="#">中文文档</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">使用技巧</a></li>
+                    <li><a href="#">Sass在线转换</a></li>
+                    <li><a href="#">关于</a></li>
+                    <li>
+                        <form action="">
+                            <select name="language" id="">
+                                <option value="">Language</option>
+                                <option value="en">English</option>
+                                <option value="cn">中文</option>
+                            </select>
+                        </form>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
