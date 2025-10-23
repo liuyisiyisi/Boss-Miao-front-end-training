@@ -1,19 +1,82 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .parent {
-  text-align: center; /* 父元素设置文本居中 */
+       
+
+/* 清除默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+a {
+  text-decoration: none; /* 清除链接下划线 */
+}
+
+/* Header 容器：左右分布 + 垂直居中 */
+.jd-header {
+  display: flex;
+  justify-content: space-between; /* 左侧Logo居左，右侧链接居右 */
+  align-items: center; /* 所有内容垂直居中 */
+  padding: 0 20px; /* 左右内边距，避免内容贴边 */
+  height: 60px; /* 固定高度，可根据设计调整 */
+  background-color: #f5f5f5; /* 浅灰色背景，接近图片效果 */
+}
+
+/* 左侧 Logo 区：图标和文字水平排列 */
+.logo {
+  display: flex; /* 内部用Flex让图标和文字并排 */
+  align-items: center; /* 图标和文字垂直居中对齐 */
+  gap: 8px; /* 图标和文字的间距 */
+}
+
+/* 小狗图标样式 */
+.logo-icon {
+  width: 32px; /* 图标宽度，根据实际图片调整 */
+  height: 32px; /* 图标高度，保持比例 */
+  object-fit: contain; /* 图片自适应，不拉伸 */
+}
+
+/* “京东”文字样式 */
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e6162d; /* 京东红，匹配品牌色 */
+}
+
+/* 右侧功能链接样式 */
+.header-right .link {
+  font-size: 14px;
+  color: #666; /* 灰色文字，符合常见设计 */
+  transition: color 0.2s; /*  hover 过渡效果 */
+}
+.header-right .link:hover {
+  color: #e6162d; /* hover 时变红，增强交互 */
+}
+        
+    
     </style>
 </head>
+
 <body>
-    <div class="parent">
-        父元素文本（居中对齐）
-    <p class="child">子元素文本（继承父元素的居中对齐）</p>
-</div>
+   <header class="jd-header">
+  <!-- 左侧 Logo 区 -->
+  <a href="#" class="logo">
+    <img src="dog-icon.png" alt="京东图标" class="logo-icon">
+    <span class="logo-text">京东</span>
+  </a>
+  
+  <!-- 右侧功能链接 -->
+  <div class="header-right">
+    <a href="#" class="link">登录页面，提建议</a>
+  </div>
+</header>
+
 </body>
+
 </html>

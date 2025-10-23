@@ -6,85 +6,278 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* 基础样式重置 */
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
         }
 
-        html,
-        body {
-            height: 100%;
+        a {
+            text-decoration: none;
         }
 
-        body {
-            background-color: #F5F6FA;
+        /* 整体登录卡片：居中显示 + 卡片样式 */
+        .login-card {
+            width: 900px;
+            /* 整体宽度，可调整 */
+            max-width: 90%;
+            /* 响应式：小屏幕不超过90%宽度 */
+            margin: 50px auto;
+            /* 上下间距 + 水平居中 */
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            /* 圆角 */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            /* 轻微阴影，增强卡片感 */
         }
 
-        div.header {
-            margin: 10px 0;
-            height: 60px;
-        }
-
-        div.container {
-            width: 1008px;
-            margin: 0 auto;
-        }
-
-        div.header div.container {
-            height: 100%;
+        /* 顶部标题与切换区：Flex 左右分布 */
+        .login-header {
             display: flex;
             justify-content: space-between;
-        }
-        
-        div.header-left {
-            text-align: center;
-            line-height: 60px;
+            /* 标题左，切换选项右 */
+            align-items: center;
+            /* 垂直居中 */
+            margin-bottom: 30px;
         }
 
-        div.header-right {
+        .login-title {
+            font-size: 20px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .login-tabs {
             display: flex;
-            align-items: end;
+            align-items: center;
+            gap: 15px;
+            /* 选项之间的间距 */
         }
 
-        div.header-right a {
-            text-decoration: none;
-            margin-left: 8px;
-            color: #999;
+        .tab {
+            color: #666;
             font-size: 14px;
-            font-weight: 100;
-            vertical-align: middle;
         }
 
-        div.header-right img {
-            margin-right: 3px;
-            vertical-align: middle;
+        .tab.active {
+            color: #e6162d;
+            /* 京东红，当前选中状态 */
+            font-weight: 500;
         }
 
-        div.content {
-            height: 422px;
+        .tab-sep {
+            color: #ddd;
+            /* 分隔线颜色 */
+        }
+
+        /* 主体内容区：Flex 左右分栏 */
+        .login-body {
+            display: flex;
+            align-items: center;
+            /* 垂直居中两栏内容 */
+            gap: 40px;
+            /* 两栏之间的间距 */
+        }
+
+        /* 左侧扫码区：居中对齐 */
+        .scan-area {
+            flex: 1;
+            /* 占一半宽度（与右侧平分） */
+            text-align: center;
+            /* 内容水平居中 */
+            padding: 20px 0;
+        }
+
+        .scan-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .scan-tutorial {
+            color: #e6162d;
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: inline-block;
+            /* 让margin生效 */
+        }
+
+        .qr-code img {
+            width: 180px;
+            /* 二维码宽度 */
+            height: 180px;
+            border: 1px solid #eee;
+            padding: 10px;
+        }
+
+        /* 中间分隔线 */
+        .separator {
+            width: 1px;
+            height: 250px;
+            /* 分隔线高度，与内容区匹配 */
+            background-color: #eee;
+        }
+
+        /* 右侧表单区：宽度自适应 */
+        .form-area {
+            flex: 1;
+            /* 占一半宽度 */
+            padding: 20px 0;
+        }
+
+        /* 表单输入框 */
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            /* 输入框之间的间距 */
+            margin-bottom: 20px;
+        }
+
+        .input-item {
+            width: 100%;
+            height: 40px;
+            padding: 0 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .input-item:focus {
+            border-color: #e6162d;
+            /* 聚焦时边框变红 */
+        }
+
+        /* 登录按钮 */
+        .login-btn {
+            width: 100%;
+            height: 44px;
+            background-color: #e6162d;
+            /* 京东红 */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .login-btn:hover {
+            background-color: #c81623;
+            /*  hover 时略深 */
+        }
+
+        /* 其他登录方式：Flex 水平分布 */
+        .other-login {
+            display: flex;
+            justify-content: center;
+            /* 整体居中 */
+            gap: 20px;
+            /* 链接之间的间距 */
+            font-size: 14px;
+        }
+
+        .login-wechat,
+        .login-qq {
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            /* 图标与文字间距 */
+        }
+
+        /* 假设微信/QQ图标用背景图实现 */
+        .login-wechat::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: url(wechat-icon.png) no-repeat center;
+            background-size: contain;
+        }
+
+        .login-qq::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: url(qq-icon.png) no-repeat center;
+            background-size: contain;
+        }
+
+        .other-login .link {
+            color: #666;
+        }
+
+        .other-login .link:hover {
+            color: #e6162d;
+            /* hover 变红 */
+        }
+
+        /* 响应式适配：小屏幕下两栏堆叠 */
+        @media (max-width: 768px) {
+            .login-body {
+                flex-direction: column;
+                /* 垂直排列 */
+                gap: 30px;
+            }
+
+            .separator {
+                width: 100%;
+                /* 分隔线变为水平 */
+                height: 1px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <div class="container">
-            <div class="header-left">
-                <a href="#"><img src="./img/jd/logo-201305-b.png" alt="logo"></a>
-            </div>
-            <div class="header-right">
-                <a href="#"><img src="./img/jd/dd.png" alt="dd">登录页面，改进建议</a>
+    <!-- 整体登录卡片容器 -->
+    <div class="login-card">
+        <!-- 顶部标题与切换区 -->
+        <div class="login-header">
+            <h2 class="login-title">京东APP扫码登录</h2>
+            <div class="login-tabs">
+                <a href="#" class="tab">密码登录</a>
+                <span class="tab-sep">|</span>
+                <a href="#" class="tab active">短信登录</a>
             </div>
         </div>
-    </div>
 
-    <div class="content">
-        <div class="container">
-            <div class="login-area">
-                
+        <!-- 主体内容区（左侧扫码 + 右侧表单） -->
+        <div class="login-body">
+            <!-- 左侧：扫码登录 -->
+            <div class="scan-area">
+                <p class="scan-desc">打开京东APP点击左上角扫一扫</p>
+                <a href="#" class="scan-tutorial">查看教程</a>
+                <div class="qr-code">
+                    <!-- 二维码图片 -->
+                    <img src="qr-code.png" alt="京东登录二维码">
+                </div>
+            </div>
+
+            <!-- 中间分隔线 -->
+            <div class="separator"></div>
+
+            <!-- 右侧：表单登录 -->
+            <div class="form-area">
+                <form class="login-form">
+                    <input type="text" placeholder="账号/手机号/邮箱" class="input-item">
+                    <input type="password" placeholder="密码" class="input-item">
+                    <button type="submit" class="login-btn">登录</button>
+                </form>
+
+                <!-- 其他登录方式 -->
+                <div class="other-login">
+                    <a href="#" class="login-wechat">微信登录</a>
+                    <a href="#" class="login-qq">QQ登录</a>
+                    <a href="#" class="link">忘记密码</a>
+                    <a href="#" class="link">立即注册</a>
+                </div>
             </div>
         </div>
-        
     </div>
 </body>
 

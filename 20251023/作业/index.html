@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jd</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+
+        html,
+        body {
+            height: 100%;
+            background-color: #F5F6FA;
+        }
+
+        div.container {
+            width: 1008px;
+            margin: 0 auto;
+        }
+
+        header {
+            height: 60px;
+            margin-top: 50px;
+        }
+
+        header div.container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: end;
+        }
+
+        .header-right a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #999;
+            vertical-align: middle;
+        }
+
+        .header-right a:hover {
+            color: red;
+        }
+
+        .header-right img {
+            vertical-align: middle;
+            padding-right: 5px;
+        }
+
+        div.content {
+            margin-top: 100px;
+        }
+
+        div.content p img {
+            width: 18px;
+            vertical-align: middle;
+        }
+
+        div.content div.container {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 100px 0;
+        }
+
+        div.content-left,
+        div.content-right {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        div.content-right input,
+        div.content-right button {
+            width: 80%;
+            height: 40px;
+            font-size: 18px;
+        }
+
+        div.content-right input {
+            padding: 0 20px;
+            border: 0;
+            background-color: #F7F8FC;
+        }
+
+        div.content-right button {
+            background-color: #FD9D94;
+            border: 0;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        div.content-right a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        div.content-right ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        div.content-right a:hover {
+            color: red;
+        }
+
+        div.content-right li:not(:first-child)::before {
+            content: "";
+            /* 伪元素必须有content */
+            display: inline-block;
+            width: 1px;
+            /* 竖线宽度 */
+            height: 20px;
+            /* 竖线高度（与文字行高匹配） */
+            background-color: #ddd;
+            /* 竖线颜色 */
+            margin-right: 12px;
+        }
+
+        div.footer {
+            margin-top: 100px;
+            height: 200px;
+        }
+
+        div.footer ul.footer-list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div.footer ul.footer-list a {
+            text-decoration: none;
+            color: #999;
+        }
+        div.footer p {
+            width: 400px;
+            margin: 0 auto;
+            font-size: 12px;
+            margin-top: 20px;
+            color: #999;
+        }
+
+
+        ul.footer-list li:not(:first-child)::before {
+            content: "";
+            /* 伪元素必须有content */
+            display: inline-block;
+            width: 1px;
+            /* 竖线宽度 */
+            height: 20px;
+            /* 竖线高度（与文字行高匹配） */
+            background-color: #ddd;
+            /* 竖线颜色 */
+            margin-right: 12px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <a href="#"><img src="./img/jd/logo-201305-b.png" alt=""></a>
+            </div>
+            <div class="header-right">
+                <a href="#"><img src="./img/jd/dd.png" alt="">登录页面，改进建议</a>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="content-left">
+                <h2>京东APP扫码登录</h2>
+                <p>打开京东APP点左上角扫一扫<img src="./img/jd/qrcode-icon.png" alt=""><a href="#"></a></p>
+                <img src="./img/jd/show.png" alt="">
+            </div>
+            <div class="content-right">
+                <h2>密码登录 短信登录</h2>
+                <input type="text" placeholder="账号名/手机号/邮箱">
+                <input type="password" placeholder="密码">
+                <button>登录</button>
+                <ul class="content-right-list">
+                    <li><a href="">微信登录</a></li>
+                    <li><a href="">QQ登录</a></li>
+                    <li><a href="">忘记密码</a></li>
+                    <li class="register"><a href="">立即注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <ul class="footer-list">
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+            <p>Copyright © 2004-2025  京东JD.com 版权所有</p>
+        </div>
+    </div>
+</body>
+
+</html>
