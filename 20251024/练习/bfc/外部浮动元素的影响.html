@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 外部浮动元素的影响 */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .box {
+            width: 100px;
+            height: 100px;
+            /* display: flex; */
+
+        }
+
+        .box1 {
+            background-color: rgba(255, 166, 0, 0.993);
+            float: left;
+        }
+
+        .box2 {
+            background-color: green;
+
+            /* 浮动 开启bfc */
+            /* float: left; */
+
+            /* 绝对定位 固定定位 开启bfc */
+            /* position: absolute;*/    
+            /* position: fixed; */
+
+
+            /* display: inline-block; */
+            /* display: table; */
+
+            /* overflow: hidden; */
+            /* overflow: auto; */
+            /* overflow: scroll; */
+
+            /* column-count: 1; */
+            /* display: flow-root; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</body>
+
+</html>
